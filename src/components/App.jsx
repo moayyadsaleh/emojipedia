@@ -1,8 +1,6 @@
 import React from "react";
-import "./styles.css"
-import EmojiList from "./EmojiList";
-import emojipedia from "../emojipedia";
-//Slice the following up into different pieces 
+import "./styles.css";
+import EmojiList from "./EmojiList"; // Adjust the import path
 
 function App() {
   return (
@@ -10,7 +8,10 @@ function App() {
       <h1>
         <span>emojipedia</span>
       </h1>
-      <EmojiList emojis={emojipedia} />
+
+      <dl className="dictionary">
+        <EmojiList /> {/* Use the EmojiList function */}
+      </dl>
     </div>
   );
 }

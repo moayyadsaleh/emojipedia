@@ -1,14 +1,17 @@
 import React from "react";
-import EmojiItem from "./EmojiItem";
+import EmojiItem from "./EmojiItem"; // Adjust the import path
+import emojipedia from "../emojipedia";
 
-function EmojiList({ emojis }) {
-  return (
-    <dl className="dictionary">
-      {emojis.map(({ id, emoji, name, meaning }) => (
-        <EmojiItem key={id} emoji={emoji} name={name} meaning={meaning} />
-      ))}
-    </dl>
-  );
+function EmojiList() {
+  // Rename the function to EmojiList
+  return emojipedia.map((emojiObj) => (
+    <EmojiItem
+      key={emojiObj.id}
+      emoji={emojiObj.emoji}
+      name={emojiObj.name}
+      meaning={emojiObj.meaning}
+    />
+  ));
 }
 
-export default EmojiList;
+export default EmojiList; // Export the function as EmojiList

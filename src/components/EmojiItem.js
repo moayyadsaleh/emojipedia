@@ -1,5 +1,6 @@
 import React from "react";
 
+//Extracted EmojiItem
 function EmojiItem({ emoji, name, meaning }) {
   return (
     <div className="term">
@@ -15,5 +16,3 @@ function EmojiItem({ emoji, name, meaning }) {
 }
 
 export default EmojiItem;
-
-
